@@ -57,7 +57,7 @@ export default function Intro({ onComplete }: IntroProps) {
       setIndex((current) => {
         return Math.min(current + 1, total - 1);
       });
-    }, 80);
+    }, 100);
 
     return () => {
       window.clearTimeout(timer);
@@ -118,7 +118,7 @@ export default function Intro({ onComplete }: IntroProps) {
       {index >= 0 && total > 0 && (
         <>
           {/* GREETING */}
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="sync">
             <motion.h1
               key={safeIndex}
               initial={{
@@ -137,9 +137,9 @@ export default function Intro({ onComplete }: IntroProps) {
                 filter: "blur(6px)",
               }}
               transition={{
-                duration: 0.08,
-                ease: "easeOut",
-              }}
+  duration: 0.06,
+  ease: "easeOut",
+}}
               className="
                 px-6
                 text-center
