@@ -101,9 +101,9 @@ export default function Intro({ onComplete }: IntroProps) {
             }
       }
       transition={{
-        duration: 0.9,
-        ease: [0.76, 0, 0.24, 1],
-      }}
+  duration: 0.1,
+  ease: [0.22, 1, 0.36, 1],
+}}
       className="
         fixed
         inset-0
@@ -118,7 +118,7 @@ export default function Intro({ onComplete }: IntroProps) {
       {index >= 0 && total > 0 && (
         <>
           {/* GREETING */}
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="popLayout">
   <motion.h1
     key={safeIndex}
     initial={{
