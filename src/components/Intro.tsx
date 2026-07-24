@@ -57,7 +57,7 @@ export default function Intro({ onComplete }: IntroProps) {
       setIndex((current) => {
         return Math.min(current + 1, total - 1);
       });
-    }, 100);
+    }, 80);
 
     return () => {
       window.clearTimeout(timer);
@@ -119,41 +119,41 @@ export default function Intro({ onComplete }: IntroProps) {
         <>
           {/* GREETING */}
           <AnimatePresence mode="sync">
-            <motion.h1
-              key={safeIndex}
-              initial={{
-                opacity: 0,
-                y: 18,
-                filter: "blur(8px)",
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-              }}
-              exit={{
-                opacity: 0,
-                y: -18,
-                filter: "blur(6px)",
-              }}
-              transition={{
-  duration: 0.06,
-  ease: "easeOut",
-}}
-              className="
-                px-6
-                text-center
-                text-5xl
-                font-semibold
-                tracking-tight
-                text-[#b52a2a]
-                sm:text-7xl
-                md:text-8xl
-              "
-            >
-              {greetings[safeIndex]}
-            </motion.h1>
-          </AnimatePresence>
+  <motion.h1
+    key={safeIndex}
+    initial={{
+      opacity: 0,
+      y: 18,
+      filter: "blur(8px)",
+    }}
+    animate={{
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+    }}
+    exit={{
+      opacity: 0,
+      y: -18,
+      filter: "blur(6px)",
+    }}
+    transition={{
+      duration: 0.08,
+      ease: "easeOut",
+    }}
+    className="
+      px-6
+      text-center
+      text-5xl
+      font-semibold
+      tracking-tight
+      text-[#b52a2a]
+      sm:text-7xl
+      md:text-8xl
+    "
+  >
+    {greetings[safeIndex]}
+  </motion.h1>
+</AnimatePresence>
 
           {/* COUNTER */}
           <motion.div
