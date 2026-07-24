@@ -118,7 +118,7 @@ export default function Intro({ onComplete }: IntroProps) {
       {index >= 0 && total > 0 && (
         <>
           {/* GREETING */}
-          <AnimatePresence mode="sync">
+          <AnimatePresence mode="wait">
   <motion.h1
     key={safeIndex}
     initial={{
