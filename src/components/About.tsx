@@ -190,7 +190,7 @@ export default function About() {
       }}
       className="block text-[#f5f5f7]"
     >
-      Sheron Oliver Khoya
+      Sheron Oliver
     </motion.span>
   </span>
 
