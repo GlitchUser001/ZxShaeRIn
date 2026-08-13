@@ -12,10 +12,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Sheron | Student, Developer & Creator",
   description:
     "Sheron is a student, developer, and creator building innovative digital projects, exploring technology, and sharing his work, ideas, and journey online.",
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Sheron Oliver Khoya",
+  url: "https://zx-shae-r-in.vercel.app",
+  jobTitle: "Student, Developer & Creator",
+  description:
+    "Sheron Oliver Khoya is a student, developer, and creator exploring technology, design, and creative work.",
 };
 
 export default function RootLayout({
@@ -28,7 +38,16 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
+
+        {children}
+      </body>
     </html>
   );
 }
