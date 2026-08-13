@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ZxShaeRin",
-  description: "Portfolio of Sheron Oliver Khoya",
+  title: "Sheron | Student, Developer & Creator",
+  description:
+    "Sheron is a student, developer, and creator building innovative digital projects, exploring technology, and sharing his work, ideas, and journey online.",
 };
 
 export default function RootLayout({
