@@ -26,6 +26,9 @@ const personSchema = {
   jobTitle: "Student, Developer & Creator",
   description:
     "Sheron Oliver Khoya is a student, developer, and creator exploring technology, design, and creative work.",
+  sameAs: [
+    "https://www.linkedin.com/in/sheron-oliver-khoya-23a46b417/",
+  ],
 };
 
 export default function RootLayout({
