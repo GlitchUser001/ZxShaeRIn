@@ -21,11 +21,13 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://zx-shae-r-in.vercel.app/#sheron",
   name: "Sheron Oliver Khoya",
-  url: "https://zx-shae-r-in.vercel.app",
+  url: "https://zx-shae-r-in.vercel.app/",
+  image: "https://zx-shae-r-in.vercel.app/images/profile.jpg",
   jobTitle: "Student, Developer & Creator",
   description:
-    "Sheron Oliver Khoya is a student, developer, and creator exploring technology, design, and creative work.",
+    "Sheron Oliver Khoya is a student, developer, and creator who turns curiosity into code, ideas into experiences, and learning into things worth building.",
   sameAs: [
     "https://www.linkedin.com/in/sheron-oliver-khoya-23a46b417/",
   ],
